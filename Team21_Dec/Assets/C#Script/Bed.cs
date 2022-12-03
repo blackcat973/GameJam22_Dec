@@ -8,9 +8,21 @@ public class Bed : MonoBehaviour, IInteractable
 
     public string InteractionPrompt => _prompt;
 
+    public bool IsPickable()
+    {
+        return false;
+    }
+
+    public void Pick(Transform objectGrabPointTransform)
+    {
+        return;
+    }
+
     public bool Interact(Interactor interactor)
     {
         Debug.Log("Sleeping");
         return true;
     }
+
+
 }
