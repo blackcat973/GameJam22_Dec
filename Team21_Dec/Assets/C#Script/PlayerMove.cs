@@ -7,8 +7,15 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float walkSpeed = 10f;
 
+    public bool isRunning;
+
     Vector2 moveInput;
     Rigidbody myRigidbody;
+
+    private void Awake()
+    {
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +27,16 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Run();
+    }
+
+    private void RunPressed()
+    {
+        isRunning = true;
+    }
+
+    private void RunReleased()
+    {
+        isRunning = false;
     }
 
     void Run()
