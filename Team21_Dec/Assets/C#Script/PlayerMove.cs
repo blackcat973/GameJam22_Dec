@@ -6,8 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float walkSpeed = 10f;
+    [SerializeField] Transform fireObject;
 
+    public float PlayerHealth = 100f;
     public bool isRunning;
+    public float Distance;
+    public float ChangeHealth = 10f;
 
     Vector2 moveInput;
     Rigidbody myRigidbody;
@@ -27,6 +31,8 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Run();
+        Distance = Vector3.Distance(this.transform.position, fireObject.transform.position);
+        HealthCalculator();
     }
 
     private void RunPressed()
@@ -48,5 +54,23 @@ public class PlayerMove : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    void HealthCalculator()
+    {
+        if (PlayerHealth <= 100)
+        {
+            if (Distance > 7f)
+            {
+                PlayerHealth -= ChangeHealth * Time.deltaTime;
+            }
+            else if (Distance <= 7f)
+            {
+                PlayerHealth += ChangeHealth * Time.deltaTime;
+            }
+        }
+
+        if (PlayerHealth >= 100)
+            PlayerHealth = 100;
     }
 }

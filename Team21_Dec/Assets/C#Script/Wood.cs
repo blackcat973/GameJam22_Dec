@@ -50,15 +50,5 @@ public class Wood : MonoBehaviour, IInteractable
         if (objectGrabPointTransform != null)
             objectRigidbody.MovePosition(objectGrabPointTransform.position);
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.name == "Fire")
-        {
-            Score.score += 1;
-            Debug.Log("Put the firewood in the fire.");
-            Destroy(gameObject);
-        }
-    }
 }
 

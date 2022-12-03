@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
+    public int score;
+
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Wood"))
         {
             Destroy(collision.gameObject);
+            score += 1;
         }
     }
 }
