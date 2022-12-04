@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Book : MonoBehaviour
+public class Dog : MonoBehaviour
 {
+    // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            Debug.Log("Book worked");
+            Debug.Log("Dog worked");
         }
     }
 }
-

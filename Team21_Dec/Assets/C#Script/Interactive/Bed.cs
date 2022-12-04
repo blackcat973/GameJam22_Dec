@@ -10,7 +10,7 @@ public class Bed : MonoBehaviour, IInteractable
 
     public string InteractionPrompt => _prompt;
 
-    public int levelNum = 0;
+    public int levelNum;
 
     public bool IsPickable()
     {

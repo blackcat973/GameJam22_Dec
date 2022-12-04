@@ -15,8 +15,6 @@ public class Fire : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Fire worked");
             score += 1;
-            
-
         }
     }
 }
