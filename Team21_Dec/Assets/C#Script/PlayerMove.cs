@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     public bool isRunning;
     public float Distance;
     public float ChangeHealth = 10f;
-
+    public AudioSource footstepSound;
     Vector2 moveInput;
     Rigidbody myRigidbody;
 
@@ -54,6 +54,7 @@ public class PlayerMove : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        footstepSound.Play();
     }
 
     void HealthCalculator()

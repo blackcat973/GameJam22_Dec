@@ -15,6 +15,7 @@ public class Interactor : MonoBehaviour
 
     private IInteractable _interactable;
 
+    public AudioSource pickupwoodSound;
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +33,7 @@ public class Interactor : MonoBehaviour
                 {
                     _interactable.Pick(_interactionPoint);
                     _interactable.Interact(this);
+                    pickupwoodSound.Play();
                 }
                 else if (Keyboard.current.eKey.wasPressedThisFrame && !(_interactable.IsPickable()) && !(_interactable.IsHouse()))
                 {
