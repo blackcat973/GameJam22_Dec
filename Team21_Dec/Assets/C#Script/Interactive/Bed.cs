@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bed : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
+    [SerializeField] Fire fire;
 
     public string InteractionPrompt => _prompt;
+
+    public int levelNum = 0;
 
     public bool IsPickable()
     {
@@ -25,9 +29,18 @@ public class Bed : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Sleeping");
+        if (fire.score == 3)
+        {
+            Debug.Log("Sleeping");
+            levelNum += 1;
+            Debug.Log(levelNum);
+            LoadNextLevel(levelNum);
+        }
         return true;
     }
 
-
+    public void LoadNextLevel(int x)
+    {
+        SceneManager.LoadScene(x);
+    }
 }

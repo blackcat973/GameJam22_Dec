@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
             }
             else if (Distance <= 7f)
             {
-                PlayerHealth += ChangeHealth * Time.deltaTime;
+                PlayerHealth += 3 * ChangeHealth * Time.deltaTime;
             }
         }
 

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class ScoreOne : MonoBehaviour
 {
-    Fire fire;
-    private Image WoodScoreCircle;
+    [SerializeField] private Fire fire;
+    [SerializeField] private Image WoodScoreCircle;
 
     // Start is called before the first frame update
     void Start()
     {
-        WoodScoreCircle = GetComponent<Image>();
+        //WoodScoreCircle = GetComponent<Image>();
         fire = FindObjectOfType<Fire>();
     }
 

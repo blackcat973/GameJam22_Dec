@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06441812, g: 0.05565965, b: 0.034807052, a: 1}
+  m_IndirectSpecularColor: {r: 0.17609319, g: 0.22037958, b: 0.30270708, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3163,8 +3163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Sleeping [E]
-  fire: {fileID: 1581699518}
-  levelNum: 0
+  fire: {fileID: 0}
 --- !u!65 &75464808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6436,7 +6435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prompt: Sleeping [E]
   fire: {fileID: 0}
-  levelNum: 0
 --- !u!65 &197833872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21200,7 +21198,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.48848563, y: -0.27733472, z: -0.7586778, w: 0.32996264}
+  m_LocalRotation: {x: 0.48848385, y: -0.27733183, z: -0.7586797, w: 0.32996336}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26310,7 +26308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - message: Now it's warm. I'm gonna turn over for the night.
-  - message: (Go to bed, Press [E])
+  - message: (Go to bed, Press [Q])
   fire: {fileID: 1581699518}
 --- !u!23 &877846935
 MeshRenderer:
@@ -46152,135 +46150,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 75110279aef27ed44bfcce4332f74c56, type: 3}
   m_PrefabInstance: {fileID: 1484889985}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1485993671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1485993677}
-  - component: {fileID: 1485993676}
-  - component: {fileID: 1485993675}
-  - component: {fileID: 1485993674}
-  - component: {fileID: 1485993673}
-  - component: {fileID: 1485993672}
-  m_Layer: 6
-  m_Name: Wood (2)
-  m_TagString: Wood
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!54 &1485993672
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  serializedVersion: 2
-  m_Mass: 0.88
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1485993673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1b5f165b5226d4cb95d2cc2075e24b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prompt: PickUp/Drop Wood [E]
-  OriginPoint: {fileID: 0}
---- !u!65 &1485993674
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.5, z: 0.7}
-  m_Center: {x: 0, y: 0.22, z: 0}
---- !u!23 &1485993675
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 7e990180e55b2dc4682d4e49bb2d711f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1485993676
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  m_Mesh: {fileID: 8173848119811522612, guid: 23d4500b796e75249bdfc9c58f4ddb83, type: 3}
---- !u!4 &1485993677
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485993671}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.721, y: 0.213, z: 6.351}
-  m_LocalScale: {x: 1.6276, y: 1.6276, z: 1.6276}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1488540760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50101,6 +49970,9 @@ MonoBehaviour:
   - message: "Winter has been harsh this year. The woods have been covered in snow
       since October. Didn\u2019t think it\u2019d get that cold that early; my lack
       of prep has been kicking my ass."
+  - message: "Winter has been harsh this year. The woods have been covered in snow
+      since October. Didn\u2019t think it\u2019d get that cold that early; my lack
+      of prep has been kicking my ass."
   - message: (Get some firewood, and throw it into the fireplace using [E])
   - message: (Press [Q] for getting into the house)
 --- !u!1001 &1621310914
@@ -52635,7 +52507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728269178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.721, y: 0.213, z: 5.238}
+  m_LocalPosition: {x: 9.707, y: 0.213, z: 12.648}
   m_LocalScale: {x: 1.6276, y: 1.6276, z: 1.6276}
   m_ConstrainProportionsScale: 0
   m_Children: []

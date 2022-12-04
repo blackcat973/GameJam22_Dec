@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
-    [SerializeField] Dialogue dialogue;
-    public int score;
+    public Message[] messages;
 
-    // Start is called before the first frame update
+    public void StartDialogue()
+    {
+        FindObjectOfType<DialogueManager>().OpenDialogue(messages);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            dialogue.StartDialogue();
+            StartDialogue();
         }
     }
+}
+
+[System.Serializable]
+public class Message
+{
+    public string message;
 }

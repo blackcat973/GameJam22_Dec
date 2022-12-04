@@ -28,12 +28,12 @@ public class Interactor : MonoBehaviour
             {
                 if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt);
 
-                if (Keyboard.current.eKey.wasPressedThisFrame && _interactable.IsPickable())
+                if (Keyboard.current.eKey.wasPressedThisFrame && _interactable.IsPickable() && !(_interactable.IsHouse()))
                 {
                     _interactable.Pick(_interactionPoint);
                     _interactable.Interact(this);
                 }
-                else if (Keyboard.current.eKey.wasPressedThisFrame && !(_interactable.IsPickable()))
+                else if (Keyboard.current.eKey.wasPressedThisFrame && !(_interactable.IsPickable()) && !(_interactable.IsHouse()))
                 {
                     _interactable.Interact(this);
                 }

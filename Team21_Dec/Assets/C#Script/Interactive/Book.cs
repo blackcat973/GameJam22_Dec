@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fire : MonoBehaviour
+public class Book : MonoBehaviour
 {
-    public int score;
-
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Wood"))
+        if (collision.collider.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-            score += 1;
+            Destroy(this.gameObject);
+            Debug.Log("Book worked");
         }
     }
 }
