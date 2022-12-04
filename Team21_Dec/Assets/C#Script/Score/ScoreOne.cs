@@ -19,6 +19,9 @@ public class ScoreOne : MonoBehaviour
     void Update()
     {
         if (fire.score >= 1)
+        {
+            Debug.Log("Fire Work");
             WoodScoreCircle.color = Color.green;
+        }
     }
 }

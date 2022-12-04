@@ -18,6 +18,11 @@ public class Wood : MonoBehaviour, IInteractable
         objectRigidbody = GetComponent<Rigidbody>();
     }
 
+    public bool IsHouse()
+    {
+        return false;
+    }
+
     public bool IsPickable()
     {
         return true;

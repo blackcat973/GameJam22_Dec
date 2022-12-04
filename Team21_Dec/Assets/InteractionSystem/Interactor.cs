@@ -37,7 +37,10 @@ public class Interactor : MonoBehaviour
                 {
                     _interactable.Interact(this);
                 }
-
+                else if (Keyboard.current.qKey.wasPressedThisFrame && _interactable.IsHouse())
+                {
+                    _interactable.Interact(this);
+                }
             }
         }
         else

@@ -13,6 +13,11 @@ public class Bed : MonoBehaviour, IInteractable
         return false;
     }
 
+    public bool IsHouse()
+    {
+        return false;
+    }
+
     public void Pick(Transform objectGrabPointTransform)
     {
         return;
