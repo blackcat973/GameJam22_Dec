@@ -11,6 +11,7 @@ public class EnterHouse : MonoBehaviour, IInteractable
 
     public string InteractionPrompt => _prompt;
 
+    public AudioSource doorSound;
     public bool IsPickable()
     {
         return false;
@@ -30,6 +31,8 @@ public class EnterHouse : MonoBehaviour, IInteractable
     {
         Debug.Log("Enter");
         thePlayer.transform.position = teleportTarget.transform.position;
+        doorSound.Play();
         return true;
     }
+
 }
